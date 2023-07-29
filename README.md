@@ -21,16 +21,18 @@ Test code is located in files TestArray.hpp and TestArray.cpp.
 - Using array view on memory managed outside of the array classes.
 - Cloning
 
-## Results
+## Array element access methods tested and compared 
 
-### Subscript operators
-Write time: 1.02376 ns. - classics highly optimized access.
+Tested on 4-D arrays with 100,000,000 elements.
 
-### Variadic function template
-Write time: 0.94222 ns. - tends to be the faster one.
+### Subscript operator using helper classes
+Write time: 1.02376 ns. - classics highly optimized access
 
-### Index visitor functor.
-Write time: 1.02869 ns  - Very cool because it combines flexibility and speed.
+### Subscript operator using variadic function templates
+Write time: 0.94222 ns. - tends to be the faster one
+
+### Array element access and traversal using an index visitor functor
+Write time: 1.02869 ns  - very cool because it combines flexibility and speed
 
 ### Expected output
 
