@@ -14,14 +14,25 @@ Test code is located in files TestArray.hpp and TestArray.cpp.
 
 - Random access operator implemented via optimized helper access classes.
 - Random access operator implemented via variadic function templates.
-- Traversing arrays or array slices with passing a lambda as an operation to be performed on the elements.
+- Traversing arrays or array slices with passing a lambda (a functor) as an operation to be performed on the elements.
 
 ### Demonstration cases
 
 - Using array view on memory managed outside of the array classes.
 - Cloning
 
-## Expected output
+## Results
+
+### Subscript operators
+Write time: 1.02376 ns. - classics highly optimized access.
+
+### Variadic function template
+Write time: 0.94222 ns. - tends to be the faster one.
+
+### Index visitor functor.
+Write time: 1.02869 ns  - Very cool because it combines flexibility and speed.
+
+### Expected output
 
 		A small 3D array:
 		0 1
